@@ -1,4 +1,5 @@
 <?php
+namespace App\UseCases;
 
 use App\Models\Account;
 use App\Models\Transaction;
