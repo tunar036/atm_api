@@ -28,4 +28,5 @@ Route::middleware('auth:sanctum')->group(function () {
     });
     Route::post('/withdraw', [ATMController::class, 'withdraw']);
     Route::get('/transactions', [ATMController::class, 'transactionHistory']);
+    Route::delete('/transactions/{id}', [ATMController::class, 'deleteTransaction']);
 });
