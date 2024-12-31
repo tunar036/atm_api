@@ -22,9 +22,10 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::post('/login', [AuthController::class, 'login']);
-Route::middleware('auth:sanctum')->group(function(){
+Route::middleware('auth:sanctum')->group(function () {
     Route::get('/user', function (Request $request) {
         return $request->user();
     });
-    Route::post('/withdraw',[ATMController::class,'withdraw']);
+    Route::post('/withdraw', [ATMController::class, 'withdraw']);
+    Route::get('/transactions', [ATMController::class, 'transactionHistory']);
 });

@@ -9,13 +9,14 @@ class Account extends Model
 {
     use HasFactory;
     protected $fillable = ['user_id', 'balance'];
-    
+
     public function user()
     {
         return $this->belongsTo(User::class);
     }
 
-    public function transactions(){
+    public function transactions()
+    {
         $this->hasMany(Transaction::class);
     }
 }

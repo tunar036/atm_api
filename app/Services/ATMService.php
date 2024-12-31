@@ -4,7 +4,7 @@ namespace App\Services;
 
 class ATMService
 {
-    public function calculateNotes($amount)
+    public function calculateNotes($amount): array
     {
         $notes =  [
             200 => 0,
@@ -13,6 +13,7 @@ class ATMService
             20  => 0,
             10  => 0,
             5   => 0,
+            1 => 0,
         ];
 
         foreach ($notes as $note => $count) {
