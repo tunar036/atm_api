@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 class WithdrawUseCase
 {
-    protected ATMService $atmService;
+    protected ATMservice $atmService;
     public function __construct(ATMService $atmService)
     {
         $this->atmService = $atmService;
